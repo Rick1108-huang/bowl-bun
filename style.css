@@ -46,12 +46,12 @@ header h1 {
 
 .hero-content h1 {
     font-size: 3rem;
-    color: #4e342e; /* 深棕 */
+    color: #fff;
 }
 
 .hero-content h2 {
     font-size: 1.5rem;
-    color: #6d4c41;
+    color: #fff;
     margin-bottom: 20px;
 }
 
