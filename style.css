@@ -1,60 +1,149 @@
-/* style.css */
+/* 全局樣式 */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-}
-header {
-    background-color: #470404e2;
-    padding: 15px;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #faf290;
-    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4ede3; /* 米色背景 */
+    color: #4e342e; /* 深棕文字 */
 }
 
+/* 標題 */
+header {
+    background-color: #6d4c41; /* 深棕色 */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* 訂購按鈕 */
+.order-button {
+    background-color: #8d6e63; /* 中棕色 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #5d4037; /* 深棕色 hover */
+}
+
+/* 英雄區塊 */
 #hero {
     background-image: url('wooden.jpeg'); 
     background-size: cover;
+    padding: 60px 20px;
     text-align: center;
-    text-align: center;
-    color: #fff; /* 文字顏色，可調整 */
-    padding: 100px 0; /* 可根據需要調整內外距 */
 }
-img {
-    width: 200px;
-    height: px;
-  }
-.menu-item {
-    text-align: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #4e342e; /* 深棕 */
 }
-.order-button {
-    position: absolute;
-    top: 10px; /* 距離頂部 10px */
-    right: 10px; /* 距離右邊 10px */
-    background-color: #4CAF50; /* 按鈕背景顏色 */
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    color: #6d4c41;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    background-color: #a1887f; /* 灰棕色 */
     color: white;
-    padding: 15px 32px;
-    
-    text-align: center;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
     text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.img {
+    width: 150px;
+    height: 150px;
+}
+.hero-content .btn:hover {
+    background-color: #5d4037; /* 深棕 hover */
+}
+
+/* 菜單區塊 */
+#menu {
+    background-color: #f1f1e6; /* 米色 */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#menu h2, #menu h3 {
+    color: #4e342e;
+}
+
+.menu-item {
     display: inline-block;
-    font-size: 16px;
-  }
-.h1{
+    width: 300px;
+    margin: 10px;
+    text-align: left;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h4 {
+    color: #6d4c41;
+    margin: 10px 0 5px;
+}
+
+.menu-item p {
+    color: #5d4037;
+    line-height: 1.6;
+}
+
+/* 關於我們區塊 */
+#about {
+    background-color: #d7ccc8; /* 淡棕色背景 */
+    padding: 40px 20px;
+}
+
+#about h1, #about h2, #about h3 {
+    color: #4e342e;
+}
+
+#about img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* 頁尾 */
+footer {
+    background-color: #6d4c41;
+    color: white;
     text-align: center;
-}  
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    padding: 10px;
+}
+
+footer .btn {
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+footer .btn:hover {
+    background-color: #5d4037;
 }
