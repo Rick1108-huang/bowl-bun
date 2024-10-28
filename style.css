@@ -46,12 +46,13 @@ header h1 {
 
 .hero-content h1 {
     font-size: 3rem;
-    color: #fff;
+    color: #faf0e6; /* 淡米色文字 */
+    margin-bottom: 10px;
 }
 
 .hero-content h2 {
     font-size: 1.5rem;
-    color: #fff;
+    color: #e0d5c4; /* 柔和的米灰色 */
     margin-bottom: 20px;
 }
 
@@ -65,14 +66,14 @@ header h1 {
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
+
+.hero-content .btn:hover {
+    background-color: #5d4037; /* 深棕 hover */
+}
 .img {
     width: 150px;
     height: 150px;
 }
-.hero-content .btn:hover {
-    background-color: #5d4037; /* 深棕 hover */
-}
-
 /* 菜單區塊 */
 #menu {
     background-color: #f1f1e6; /* 米色 */
