@@ -1,16 +1,18 @@
 /* style.css */
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 header {
     background-color: #470404e2;
-    padding: 20px;
+    padding: 15px;
 }
 body {
     font-family: Arial, sans-serif;
     background-color: #faf290;
+    text-align: center;
 }
 
 #hero {
@@ -23,9 +25,10 @@ body {
 }
 img {
     width: 200px;
-    height: 150px;
+    height: px;
   }
 .menu-item {
+    text-align: center;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
@@ -38,6 +41,7 @@ img {
     background-color: #4CAF50; /* 按鈕背景顏色 */
     color: white;
     padding: 15px 32px;
+    
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -51,5 +55,6 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    text-align: center;
     justify-content: center;
 }
