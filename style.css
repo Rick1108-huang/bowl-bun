@@ -3,15 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif; /* 更現代的字體 */
 }
 
 /* 頁面背景顏色 */
 body {
-  background-color: #f4f7fc;
+  background-color: #f9f9f9; /* 淺灰色背景 */
   color: #333;
   font-size: 16px;
   line-height: 1.6;
+  padding-bottom: 60px; /* 留空頁尾空間 */
 }
 
 /* 頁面容器 */
@@ -24,18 +25,21 @@ body {
 /* 標題 */
 h1 {
   text-align: center;
-  color: #4CAF50;
-  margin-bottom: 20px;
+  color: #2F4F4F; /* 深灰色標題 */
+  margin-bottom: 30px;
+  font-size: 2.5em; /* 更大標題 */
 }
 
 /* 工具欄 */
 header {
-  background-color: #4CAF50;
-  padding: 10px 20px;
+  background-color: #4A90E2; /* 藍色背景 */
+  padding: 15px 30px;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 8px;
+  margin-bottom: 30px; /* 工具欄與其他內容保持距離 */
 }
 
 header .logo {
@@ -61,17 +65,18 @@ header nav a:hover {
 }
 
 .pagination button {
-  padding: 10px 15px;
-  margin: 0 5px;
+  padding: 12px 18px;
+  margin: 0 10px;
   border: none;
-  background-color: #4CAF50;
+  background-color: #4A90E2;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .pagination button:hover {
-  background-color: #45a049;
+  background-color: #357ABD; /* 按鈕hover色 */
 }
 
 /* 分頁內容區 */
@@ -86,9 +91,10 @@ header nav a:hover {
 .expense-list {
   flex: 1;
   background-color: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* 支出列表與表單間隔 */
 }
 
 table {
@@ -98,27 +104,27 @@ table {
 }
 
 table th, table td {
-  padding: 10px;
+  padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
 table th {
-  background-color: #f4f7fc;
-  color: #4CAF50;
+  background-color: #e4f2f9; /* 淺藍色表頭 */
+  color: #4A90E2; /* 藍色標題文字 */
 }
 
 table tr:hover {
-  background-color: #f9f9f9;
+  background-color: #f0f8ff; /* 浅藍色hover背景 */
 }
 
 /* 右側表單 */
 .expense-form {
   flex: 1;
   background-color: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .expense-form label {
@@ -129,7 +135,7 @@ table tr:hover {
 
 .expense-form input, .expense-form select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -138,8 +144,8 @@ table tr:hover {
 
 .expense-form button {
   width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
+  padding: 12px;
+  background-color: #4A90E2;
   color: white;
   border: none;
   font-size: 16px;
@@ -148,12 +154,12 @@ table tr:hover {
 }
 
 .expense-form button:hover {
-  background-color: #45a049;
+  background-color: #357ABD; /* 按鈕hover色 */
 }
 
 /* 圖表區域 */
 .chart-container {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -165,17 +171,19 @@ table tr:hover {
 /* 總支出區 */
 .total-expense {
   text-align: center;
-  margin-top: 20px;
-  font-size: 24px;
-  color: #4CAF50;
+  margin-top: 30px;
+  font-size: 28px; /* 更大顯示總支出 */
+  color: #2F4F4F; /* 深灰色顯示 */
 }
 
+/* 頁尾 */
 footer {
-  background-color: #4CAF50;
+  background-color: #4A90E2;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top: 30px; /* 頁尾距離內容的間隔 */
 }
