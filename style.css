@@ -1,189 +1,60 @@
-/* 基本樣式 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; /* 更現代的字體 */
-}
+/* 重設樣式，確保瀏覽器默認樣式一致 */
+body, p, ul, li, dl, dt, dd, blockquote, fieldset, form, input, textarea, table, caption, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+  
+  /* 全局樣式 */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f0f0f0; /* 設定為淺灰色背景 */
+    text-align: center; /* 將所有文字水平置中 */
+  }
+  
+  /* 表格樣式 */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* 表格排序按鈕樣式 */
+  .sort-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  
 
-/* 頁面背景顏色 */
-body {
-  background-color: #f9f9f9; /* 淺灰色背景 */
-  color: #333;
-  font-size: 16px;
-  line-height: 1.6;
-  padding-bottom: 60px; /* 留空頁尾空間 */
-}
-
-/* 頁面容器 */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* 標題 */
-h1 {
-  text-align: center;
-  color: #2F4F4F; /* 深灰色標題 */
-  margin-bottom: 30px;
-  font-size: 2.5em; /* 更大標題 */
-}
-
-/* 工具欄 */
-header {
-  background-color: #4A90E2; /* 藍色背景 */
-  padding: 15px 30px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  margin-bottom: 30px; /* 工具欄與其他內容保持距離 */
-}
-
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 18px;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* 分頁控制 */
-.pagination {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.pagination button {
-  padding: 12px 18px;
-  margin: 0 10px;
-  border: none;
-  background-color: #4A90E2;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.pagination button:hover {
-  background-color: #357ABD; /* 按鈕hover色 */
-}
-
-/* 分頁內容區 */
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-/* 左側支出列表 */
-.expense-list {
-  flex: 1;
-  background-color: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* 支出列表與表單間隔 */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-table th, table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-table th {
-  background-color: #e4f2f9; /* 淺藍色表頭 */
-  color: #4A90E2; /* 藍色標題文字 */
-}
-
-table tr:hover {
-  background-color: #f0f8ff; /* 浅藍色hover背景 */
-}
-
-/* 右側表單 */
-.expense-form {
-  flex: 1;
-  background-color: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.expense-form label {
-  font-size: 16px;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.expense-form input, .expense-form select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.expense-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #4A90E2;
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.expense-form button:hover {
-  background-color: #357ABD; /* 按鈕hover色 */
-}
-
-/* 圖表區域 */
-.chart-container {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.chart-container canvas {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 總支出區 */
-.total-expense {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 28px; /* 更大顯示總支出 */
-  color: #2F4F4F; /* 深灰色顯示 */
-}
-
-/* 頁尾 */
-footer {
-  background-color: #4A90E2;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin-top: 30px; /* 頁尾距離內容的間隔 */
-}
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  /* 分頁樣式 */
+  #pagination {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* 圖表樣式 */
+  #expense-chart {
+    /* Chart.js 的樣式會覆蓋此樣式 */
+  }
+  
+  /* 響應式設計示例 */
+  @media (max-width: 768px) {
+    /* 手機螢幕樣式 */
+    aside, section {
+      width: 100%;
+    }
+  }
