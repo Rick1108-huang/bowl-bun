@@ -1,81 +1,81 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOWL&BUN</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記帳網站</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>歡迎來到 BOWL&BUN 的網站</h1>
-        <button class="order-button" onclick="location.href='https://forms.gle/jTvuoGTubn2SQ4yx5'">立即訂購</button>
-    </header>
+  <header>
+    <nav>
+      <h1>記帳網站</h1>
+      <input type="text" id="search-bar" placeholder="搜尋支出...">
+      <button id="view-charts">查看圖表</button>
+    </nav>
+  </header>
+  <main>
+    <!-- 左側支出列表 -->
+    <aside id="expense-list">
+      <h2>支出列表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              日期 
+              <button id="sort-date-asc">▲</button>
+              <button id="sort-date-desc">▼</button>
+            </th>
+            <th>金額</th>
+            <th>類別</th>
+            <th>說明</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="expense-table-body">
+          <!-- 支出資料將由 JavaScript 動態填充 -->
+        </tbody>
+      </table>
+      <div id="pagination">
+        <!-- 分頁按鈕由 JavaScript 動態生成 -->
+      </div>
+    </aside>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>BOWL&BUN</h1>
-                <h2>兩種經典，一家滿足</h2>
-                <a href="#" class="btn">首頁</a>
-                <a href="#menu" class="btn">瀏覽菜單</a>
-                <a href="#about" class="btn">關於我們</a>
-            </div>
-        </section>
+    <!-- 右側新增支出表單 -->
+    <section id="expense-form">
+      <h2>新增/更新支出</h2>
+      <form id="add-expense-form">
+        <label for="date">日期：</label>
+        <input type="date" id="date" required>
+        
+        <label for="amount">金額：</label>
+        <input type="number" id="amount" required>
+        
+        <label for="category">類別：</label>
+        <select id="category" required>
+          <option value="food">飲食</option>
+          <option value="transport">交通</option>
+          <option value="entertainment">娛樂</option>
+          <option value="other">其他</option>
+        </select>
+        
+        <label for="description">說明：</label>
+        <input type="text" id="description">
+        
+        <button type="submit">新增/更新支出</button>
+      </form>
+    </section>
+  </main>
 
-        <section id="menu">
-            <h2>菜單</h2>
-            <h3>主餐</h3>
-            <div class="menu-item">
-                <img src="bur1.jpg" alt="美式經典起司漢堡">
-                <h4>美式經典起司漢堡</h4>
-                <p>厚切牛肉餅配上美式切達起司、生菜、蕃茄及脆洋蔥，搭配烤製的布里歐麵包。搭配選擇：薯條或沙拉。</p>
-            </div>
-            <div class="menu-item">
-                <img src="rice.jpg" alt="照燒牛肉丼">
-                <h4>照燒牛肉丼</h4>
-                <p>使用日本醬油與味醂調製的照燒醬，配上軟嫩牛肉片、洋蔥及溫泉蛋，盛裝在熱騰騰的白飯上。</p>
-            </div>
-            <div class="menu-item">
-                <img src="bur2.jpg" alt="日美融合炸雞堡">
-                <h4>日美融合炸雞堡</h4>
-                <p>炸雞腿排沾上甜辣味噌醬，夾著醃黃瓜和美乃滋，呈現微辣又濃郁的風味。</p>
-            </div>
+  <!-- 下方圖表區域 -->
+  <footer>
+    <section id="charts">
+      <h2>支出比例圖</h2>
+      <canvas id="expense-chart" width="400" height="400"></canvas>
+    </section>
+    <p>總支出：<span id="total-expense">0</span></p>
+  </footer>
 
-            <h3>飲料</h3>
-            <div class="menu-item">
-                <h4>抹茶拿鐵</h4>
-                <p>使用日本抹茶粉調製，口感綿密，帶有微苦的茶香。</p>
-            </div>
-            <div class="menu-item">
-                <h4>美式黑咖啡</h4>
-                <p>經典黑咖啡，味道濃厚，適合搭配重口味的餐點。</p>
-            </div>
-        </section>
-
-        <section id="about">
-            <h1>關於我們</h1>
-            <div class="about-item">
-                <h2>品牌理念:</h2>
-                <h3>我們的餐廳是東西方飲食文化的橋樑，致力於提供顧客創新的味覺享受，讓每一口都帶來驚喜與啟發。</h3>
-            </div>
-            <div class="about-item">
-                <h2>營業時間：1100~2100</h2>
-            </div>
-            <div class="about-item">
-                <h2>聯絡電話：0912345678</h2>
-            </div>
-            <div class="about-item">
-                <img src="map.jpg" alt="地址">
-                <h2>地址：台北市......</h2>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <a href="https://forms.gle/jTvuoGTubn2SQ4yx5" class="btn">立即訂購</a>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
