@@ -11,14 +11,16 @@ body, p, ul, li, dl, dt, dd, blockquote, fieldset, form, input, textarea, table,
   body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    background-color: #B9B9FF; /* 設定為淺灰色背景 */
+    background-color: #B9B9FF; /* 設定為淺紫色背景 */
     text-align: center; /* 將所有文字水平置中 */
+    padding: 20px; /* 保證頁面內容有適當的邊距 */
   }
   
   /* 表格樣式 */
   table {
     border-collapse: collapse;
-    width: 100%;
+    margin: 0 auto; /* 將容器水平居中 */
+    width: 70%;
   }
   
   th, td {
@@ -34,8 +36,7 @@ body, p, ul, li, dl, dt, dd, blockquote, fieldset, form, input, textarea, table,
     border: none;
   }
   
-
-  
+  /* 標籤樣式 */
   label {
     margin-bottom: 5px;
   }
@@ -44,11 +45,13 @@ body, p, ul, li, dl, dt, dd, blockquote, fieldset, form, input, textarea, table,
   #pagination {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
   }
   
   /* 圖表樣式 */
   #expense-chart {
-    /* Chart.js 的樣式會覆蓋此樣式 */
+    width: 70%; /* 確保圖表能夠適應父容器 */
+    ; /* 可以根據需要調整高度 */
   }
   
   /* 響應式設計示例 */
@@ -57,4 +60,9 @@ body, p, ul, li, dl, dt, dd, blockquote, fieldset, form, input, textarea, table,
     aside, section {
       width: 100%;
     }
+  
+    .container {
+      padding: 10px; /* 在小屏幕上適當減少內邊距 */
+    }
   }
+  
