@@ -11,7 +11,7 @@ body, p, ul, li, dl, dt, dd, blockquote, fieldset, form, input, textarea, table,
   body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    background-color: #f0f0f0; /* 設定為淺灰色背景 */
+    background-color: #B9B9FF; /* 設定為淺灰色背景 */
     text-align: center; /* 將所有文字水平置中 */
   }
   
